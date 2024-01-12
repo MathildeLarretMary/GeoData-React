@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import CountryCard from './Components/CountryCard';
-// import Modale from './Components/Modale';
 
 function App() {
 
@@ -21,11 +20,9 @@ function App() {
       </header>
       <main>
         {geodata && (geodata?.map((region) => {
-          return <CountryCard name={region.name.common} img={region.flags.png}/>
+          return <CountryCard key={region.cca3} datum={region}/>
         }))}
       </main>
-      
-      {/* <Modale /> */}
     </div>
   );
 }

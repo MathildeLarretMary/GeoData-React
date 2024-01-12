@@ -1,7 +1,9 @@
 .card {
-    background-color: aqua;
     position: relative;
-    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
 }
 
 .card:hover{
@@ -12,6 +14,12 @@ p {
     position: absolute;
     margin: 5px;
     padding: 5px;
+    left: 1px;
+    top: 1px;
     background-color: #242424;
     border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
 }

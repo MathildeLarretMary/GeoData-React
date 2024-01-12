@@ -18,13 +18,13 @@ function App() {
     <div className="App">
       <header>
         <h1>Europe Countries</h1>
-        <p>Click on a card to reveal information</p>
       </header>
-      {/* {console.log(geodata)} */}
-      {geodata?.map((region) => {
-        console.log(region);
-        <CountryCard name={region.name.common} img={region.flags.png}/>
-      })}
+      <main>
+        {geodata && (geodata?.map((region) => {
+          return <CountryCard name={region.name.common} img={region.flags.png}/>
+        }))}
+      </main>
+      
       {/* <Modale /> */}
     </div>
   );

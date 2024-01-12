@@ -1,6 +1,6 @@
 import './CountryCard.css';
 
-export default function CountryCard() {
+export default function CountryCard({name, img}) {
 
     const handleClickCard = () => {
         console.log('handleClickCard');
@@ -8,8 +8,8 @@ export default function CountryCard() {
 
     return(
         <div className="card" onClick={handleClickCard}>
-            <p>CardName</p>
-            <img src = '/OIP.jpg' alt={`CardName-flag`}></img>
+            <p>{name}</p>
+            <img src = {img} alt={`${name}-flag`}></img>
         </div>
     )
 };
